@@ -19,7 +19,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: right;
   background-color: #00baf0;
   background: linear-gradient(to left, #f46b45, #eea849);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -148,6 +148,18 @@ body {
   color: white;
 }
 
+.container {
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2em;
+}
+
 h1 {
+  color: white;
+}
+
+p {
   color: white;
 }/*# sourceMappingURL=main.css.map */

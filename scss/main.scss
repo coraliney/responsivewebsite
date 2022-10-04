@@ -1,22 +1,2 @@
 @use "buttons";
-
-body,
-html {
-  height: 100%;
-}
-
-body {
-  background-image: url(/assets/negative-space-black-forest-dawn.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100%;
-}
-
-.navbar {
-  color: white;
-}
-
-h1 {
-  color: white;
-}
+@use "startpage";

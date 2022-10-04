@@ -1,0 +1,42 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-image: url(/assets/negative-space-black-forest-dawn.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+.navbar {
+  color: white;
+}
+
+.container {
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2em;
+}
+
+bi bi-arrow-down-circle-fill {
+  color: white;
+}
+
+h1 {
+  color: white;
+}
+
+p {
+  color: white;
+}
+
+.information {
+  display: flex;
+  flex-direction: center;
+}
