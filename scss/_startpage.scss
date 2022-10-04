@@ -1,31 +1,57 @@
+$nav-height: 5em;
+
 body,
 html {
-  height: 100%;
   margin: 0;
 }
 
 body {
-  background-image: url(/assets/negative-space-black-forest-dawn.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100%;
 }
 
-.navbar {
+header {
   color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: $nav-height;
+  z-index: 10;
+}
+.menu {
+  display: flex;
+  flex-direction: row;
 }
 
-.container {
+.arrow {
+  text-align: center;
+  flex: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 2em;
+  color: black;
+}
+
+container {
   display: flex;
   margin: 0;
   flex-direction: column;
   align-items: center;
   font-size: 1.2em;
-}
-
-bi bi-arrow-down-circle-fill {
-  color: white;
+  height: 100vh;
+  position: relative;
+  &#home {
+    background-image: url(/assets/negative-space-black-forest-dawn.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: $nav-height;
+    .arrow {
+      color: white;
+    }
+  }
 }
 
 h1 {
@@ -34,6 +60,11 @@ h1 {
 
 p {
   color: white;
+}
+
+.team {
+  height: auto;
+  background-color: white;
 }
 
 .information {
