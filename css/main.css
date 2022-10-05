@@ -28,6 +28,7 @@ header {
   bottom: 0;
   font-size: 2em;
   color: black;
+  margin-bottom: 1em;
 }
 
 container {
@@ -44,26 +45,36 @@ container#home {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  height: calc(100vh - 5em);
   padding-top: 5em;
 }
 container#home .arrow {
   color: white;
 }
 
-h1 {
+#home {
+  text-align: center;
+  height: 100vh;
+  justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  #home section {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+  }
+}
+#home h1 {
   color: white;
 }
-
-p {
+#home p {
   color: white;
 }
-
-.team {
+#home .team {
   height: auto;
   background-color: white;
 }
-
-.information {
+#home .information {
   display: flex;
   flex-direction: center;
 }/*# sourceMappingURL=main.css.map */

@@ -5,9 +5,6 @@ html {
   margin: 0;
 }
 
-body {
-}
-
 header {
   color: white;
   background-color: rgba(255, 255, 255, 0.2);
@@ -23,6 +20,9 @@ header {
   flex-direction: row;
 }
 
+.frontpage {
+}
+
 .arrow {
   text-align: center;
   flex: none;
@@ -32,6 +32,7 @@ header {
   bottom: 0;
   font-size: 2em;
   color: black;
+  margin-bottom: 1em;
 }
 
 container {
@@ -47,6 +48,7 @@ container {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    height: calc(100vh - $nav-height);
     padding-top: $nav-height;
     .arrow {
       color: white;
@@ -54,20 +56,33 @@ container {
   }
 }
 
-h1 {
-  color: white;
-}
+#home {
+  text-align: center;
+  height: 100vh;
+  justify-content: center;
+  @media screen and (min-width: 768px) {
+    section {
+      display: flex;
+      flex-direction: row;
+      height: 100vh;
+    }
+  }
 
-p {
-  color: white;
-}
+  h1 {
+    color: white;
+  }
 
-.team {
-  height: auto;
-  background-color: white;
-}
+  p {
+    color: white;
+  }
 
-.information {
-  display: flex;
-  flex-direction: center;
+  .team {
+    height: auto;
+    background-color: white;
+  }
+
+  .information {
+    display: flex;
+    flex-direction: center;
+  }
 }
