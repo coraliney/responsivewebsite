@@ -1,14 +1,29 @@
+@use "mixins" as *;
+
 .information {
   background-color: #000;
   color: #fff;
   font-size: 20px;
+  width: 100%;
 }
 
 .contact {
+  @include flex-center;
+  flex-wrap: wrap;
   padding: 20px;
   text-align: center;
+  width: 100%;
+
+  .info {
+    padding: 5px;
+    width: 100%;
+  }
 }
 
-.info {
-  padding: 5px;
+@media screen and (min-width: 768px) {
+  .contact {
+    .info {
+      width: 32%;
+    }
+  }
 }

@@ -1,117 +1,130 @@
-.header ul {
-  margin: 0;
-  margin-top: 0;
-  padding-top: 100px;
-  list-style: none;
-  overflow: hidden;
-  display: none;
-  position: absolute;
-  flex-direction: column;
-  background-color: rgba(255, 255, 255, 0.2);
-  width: 100%;
-}
+@use "mixins" as *;
 
-.header ul a {
-  display: block;
-  padding: 5px;
-  text-decoration: none;
-  color: #fff;
-  text-align: center;
-  font-size: 20px;
-}
+header {
+  ul {
+    margin: 0;
+    margin-top: 0;
+    padding-top: 50px;
+    list-style: none;
+    overflow: hidden;
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 100%;
+    z-index: 100;
 
-.header ul a:hover {
-  background-color: transparent;
-  text-decoration: underline;
-}
+    a {
+      display: block;
+      padding: 5px;
+      text-decoration: none;
+      color: #fff;
+      text-align: center;
+      font-size: 20px;
 
-.header .menu {
-  clear: both;
-  max-height: 0;
-  transition: max-height 0.2s ease-out;
-}
+      &:hover {
+        background-color: transparent;
+        text-decoration: underline;
+      }
+    }
+  }
 
-.header .menu-icon {
-  padding: 28px 20px;
-  position: relative;
-  float: right;
-  cursor: pointer;
-}
+  .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+  }
 
-.header .menu-icon .nav-icon {
-  background-color: #fff;
-  display: block;
-  height: 4px;
-  width: 25px;
-  margin: 10px;
-  border-radius: 2px;
-  position: relative;
-  transition: background 0.2s ease-out;
-}
+  .menu-icon {
+    padding: 28px 20px;
+    position: relative;
+    float: right;
+    cursor: pointer;
+    z-index: 101;
 
-.header .menu-icon .nav-icon:before {
-  background: #fff;
-  content: "";
-  display: block;
-  height: 100%;
-  width: 100%;
-  border-radius: 2px;
-  position: absolute;
-  transition: all 0.2s ease-out;
-  top: 7px;
-}
+    .nav-icon {
+      background-color: #fff;
+      display: block;
+      height: 4px;
+      width: 25px;
+      margin: 10px;
+      border-radius: 2px;
+      position: relative;
+      transition: background 0.2s ease-out;
 
-.header .menu-icon .nav-icon:after {
-  background: #fff;
-  content: "";
-  display: block;
-  height: 100%;
-  width: 100%;
-  border-radius: 2px;
-  position: absolute;
-  transition: all 0.2s ease-out;
-  top: -7px;
-}
+      &:before {
+        background: #fff;
+        content: "";
+        display: block;
+        height: 100%;
+        width: 100%;
+        border-radius: 2px;
+        position: absolute;
+        transition: all 0.2s ease-out;
+        top: 7px;
+      }
 
-.header .menu-btn {
-  display: none;
-}
+      &:after {
+        background: #fff;
+        content: "";
+        display: block;
+        height: 100%;
+        width: 100%;
+        border-radius: 2px;
+        position: absolute;
+        transition: all 0.2s ease-out;
+        top: -7px;
+      }
+    }
+  }
+  .menu-btn {
+    display: none;
 
-.header .menu-btn:checked ~ .menu {
-  max-height: 240px;
-  display: block;
-  transition: all 0.2s ease-out;
-}
+    &:checked ~ .menu {
+      max-height: 240px;
+      display: block;
+      transition: all 0.2s ease-out;
+    }
 
-.header .menu-btn:checked ~ .menu-icon .nav-icon {
-  background: transparent;
-}
+    &:checked ~ .menu-icon .nav-icon {
+      background: transparent;
 
-.header .menu-btn:checked ~ .menu-icon .nav-icon:before {
-  transform: rotate(-45deg);
-  top: 0;
-}
+      &:before {
+        transform: rotate(-45deg);
+        top: 0;
+      }
 
-.header .menu-btn:checked ~ .menu-icon .nav-icon:after {
-  transform: rotate(45deg);
-  top: 0;
+      &:after {
+        transform: rotate(45deg);
+        top: 0;
+      }
+    }
+  }
 }
 
 @media (min-width: 748px) {
-  .header li {
-    float: right;
-  }
-  .header li a {
-    padding: 20px 30px;
-  }
+  header {
+    background-color: rgba(0, 0, 0, 0);
+    ul {
+      display: block;
+      padding-top: 0;
 
-  .header .menu {
-    clear: none;
-    float: right;
-    max-height: none;
-  }
+      li {
+        float: right;
 
-  .header .menu-icon {
-    display: none;
+        a {
+          padding: 20px 30px;
+        }
+      }
+    }
+
+    .menu {
+      clear: none;
+      float: right;
+      max-height: none;
+    }
+    .menu-icon {
+      display: none;
+    }
   }
 }
