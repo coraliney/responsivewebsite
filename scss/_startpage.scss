@@ -24,7 +24,7 @@ header {
   z-index: 1;
   width: 100%;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .arrow {
@@ -93,6 +93,7 @@ p {
       display: flex;
       flex-direction: column;
       height: 100vh;
+      margin-top: 20%;
     }
   }
 }
